@@ -1,2 +1,5 @@
 [phases.setup]
-nixPkgs = ["python312", "freetype", "pkg-config", "libjpeg", "zlib"]
+nixPkgs = ["python312", "postgresql", "freetype", "pkg-config", "libjpeg", "zlib"]
+
+[phases.install]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
