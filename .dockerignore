@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.DS_Store
