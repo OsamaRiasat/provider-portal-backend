@@ -1,5 +1,18 @@
 [phases.setup]
-nixPkgs = ["python312", "postgresql", "freetype", "pkg-config", "libjpeg", "zlib"]
+nixPkgs = [
+  "python311",
+  "python311Packages.pip",
+  "postgresql",       # for pg_config required by psycopg2
+  "freetype",
+  "pkg-config",
+  "libjpeg",
+  "zlib"
+]
 
 [phases.install]
-cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
+cmds = [
+  "python3.11 -m venv /opt/venv",
+  ". /opt/venv/bin/activate",
+  "pip install --upgrade pip",
+  "pip install -r requirements.txt"
+]
